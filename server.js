@@ -17,6 +17,19 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/dp3";
+
+// mongoose.connect(MONGODB_URI);
+
+// Show any mongoose errors
+// mongoose.connection.on("error", function(error) {
+//   console.log("Mongoose Error: ", error);
+// });
+
+// Once logged in to the db through mongoose, log a success message
+// mongoose.connection.once("open", function() {
+//   console.log("Mongoose connection successful.");
+// });
 
 // Start the API server
 app.listen(PORT, function() {
